@@ -3,59 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a la pagina web de Juan Ignacio Fazio</title>
+    <title>Mi Página Principal</title>
+
+    <!-- Estilos -->
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f5f5; /* Celeste claro */
+            color: #333; /* Texto oscuro */
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff; /* Celeste */
-            color: #333;
         }
 
         header {
-            background-color: #87ceeb; /* Azul claro */
-            padding: 10px;
+            background-color: #0077cc; /* Azul */
+            color: #fff; /* Texto blanco */
+            padding: 1em;
             text-align: center;
         }
 
-       <nav>
+        nav {
+            background-color: #cce5ff; /* Celeste claro */
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 1em;
+            text-decoration: none;
+            color: #0077cc; /* Azul */
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #0077cc; /* Azul */
+            color: #fff; /* Texto blanco */
+            padding: 1em;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Sitio Web</h1>
+    </header>
+
+    <nav>
         <!-- Enlace a la sección de CV -->
         <a href="cv/index.html">Ver mi CV</a>
 
         <!-- Enlace a la sección de Blog -->
         <a href="blog/index.html">Leer mi Blog</a>
-        </nav>
-
-        main {
-            padding: 20px;
-        }
-
-        footer {
-            background-color: #87ceeb; /* Azul claro */
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Interfaz de Enlace</h1>
-    </header>
-
-    <nav>
-        <a href="cv/index.html">Currículum</a>
-        <a href="blog/index.html">Blog</a>
     </nav>
 
-    <main>
-        <p></p>
-    </main>
-
     <footer>
-        
+        &copy; 2024 Mi Sitio Web
     </footer>
-
 </body>
 </html>
