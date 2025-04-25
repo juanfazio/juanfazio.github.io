@@ -1,0 +1,422 @@
+/* 
+* CV - Juan Ignacio Fazio
+* Estilos principales
+* Colors:
+* - Blanco: #FFFFFF
+* - Azul gris: #607D8B
+* - Azul: #0D47A1
+* - Negro: #000000
+*/
+
+/* ==================== ESTILOS GENERALES ==================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==================== ENCABEZADO ==================== */
+header {
+    background-color: #0D47A1;
+    color: #FFFFFF;
+    padding: 40px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-image {
+    flex: 0 0 200px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+.header-text {
+    flex: 1;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.header-text h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+}
+
+.bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+/* ==================== SECCIONES PRINCIPALES ==================== */
+main {
+    padding: 40px 0;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    color: #0D47A1;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #607D8B;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    margin-right: 10px;
+}
+
+/* ==================== EXPERIENCIA PROFESIONAL ==================== */
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100px;
+    height: 100%;
+    width: 3px;
+    background-color: #607D8B;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-date {
+    flex: 0 0 100px;
+    text-align: right;
+    padding-right: 20px;
+    font-weight: 700;
+    color: #607D8B;
+}
+
+.timeline-content {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #f9f9f9 transparent transparent;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #0D47A1;
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #607D8B;
+    margin-bottom: 15px;
+}
+
+.timeline-content p {
+    margin-bottom: 15px;
+}
+
+.timeline-content ul {
+    margin-left: 20px;
+}
+
+.timeline-content ul li {
+    margin-bottom: 5px;
+}
+
+/* ==================== EDUCACIÓN ==================== */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap:.5rem;
+}
+
+.education-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.education-year {
+    font-weight: 700;
+    color: #607D8B;
+    margin-bottom: 10px;
+}
+
+.education-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #0D47A1;
+}
+
+.education-info h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #607D8B;
+    margin-bottom: 5px;
+}
+
+/* ==================== HABILIDADES ==================== */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skills-category h3 {
+    font-size: 1.2rem;
+    color: #0D47A1;
+    margin-bottom: 15px;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #607D8B;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+/* ==================== CONTACTO ==================== */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #0D47A1;
+    margin-right: 15px;
+}
+
+.contact-item a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #0D47A1;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: #607D8B;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        flex: 0 0 150px;
+        margin-bottom: 20px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-date {
+        flex: 0 0 auto;
+        text-align: left;
+        padding-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .timeline-content::before {
+        display: none;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .header-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print styles for better paper printing */
+@media print {
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    header {
+        background-color: #fff;
+        color: #000;
+        padding: 20px 0;
+        box-shadow: none;
+    }
+
+    .header-text h1, .header-text h2 {
+        color: #0D47A1;
+    }
+
+    .section-title {
+        border-bottom: 1px solid #000;
+    }
+
+    .timeline::before,
+    .timeline-content::before {
+        display: none;
+    }
+
+    .timeline-content,
+    .education-item,
+    .contact-item {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .skill-level {
+        background-color: #888;
+    }
+
+    footer {
+        background-color: #fff;
+        color: #000;
+        border-top: 1px solid #ddd;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+}
